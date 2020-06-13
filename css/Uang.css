@@ -1,0 +1,155 @@
+.UangCom{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 11em;
+    height: 8em;
+}
+.woodCon{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../image/wood.png') right bottom no-repeat;
+    background-size: contain;
+}
+.Uangimg{
+    position: absolute;
+    bottom: 1.49em;
+    right: 0.6em;
+    width: 8.2em;
+    height: 4em;
+    /* bottom: 23px;
+    right: 9px;
+    width: 133px;
+    height: 65px; */
+    background: url('../image/Uang.png') 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+.UangMoving{
+    animation: Uangm 11s ease infinite;
+    -moz-animation: Uangm 11s ease infinite;	/* Firefox */
+    -webkit-animation: Uangm 11s ease infinite;	/* Safari 和 Chrome */
+    -o-animation: Uangm 11s ease infinite;	/* Opera */
+}
+@keyframes Uangm
+{
+    0%   {right: 0.6em;}
+    50%  {right: 1em;}
+    100% {right: 0.6em;}
+}
+
+@-moz-keyframes Uangm /* Firefox */
+{
+    0%   {right: 0.6em;}
+    50%  {right: 1em;}
+    100% {right: 0.6em;}
+}
+
+@-webkit-keyframes Uangm /* Safari 和 Chrome */
+{
+    0%   {right: 0.6em;}
+    50%  {right: 1em;}
+    100% {right: 0.6em;}
+}
+
+@-o-keyframes Uangm /* Opera */
+{
+    0%   {right: 0.6em;}
+    50%  {right: 1em;}
+    100% {right: 0.6em;}
+}
+
+/* 二维码/ */
+.paycode, .cardcode{
+    position: absolute;
+    width: 10.9em;
+    height: 8.5em;
+    left: -7.8em;
+    top: 0;
+    background: url('../image/paycode.png') 0 0 no-repeat;
+    background-size: contain;
+    /* transition: all 3s ease; */
+}
+.paycodeint{
+    transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    left: -3.5em;
+    opacity: 0;
+}
+.payanimove{
+    animation: pcanima 0.3s ease 1 forwards;
+    -moz-animation: pcanima 0.3s ease 1 forwards;	/* Firefox */
+    -webkit-animation: pcanima 0.3s ease 1 forwards;	/* Safari 和 Chrome */
+    -o-animation: pcanima 0.3s ease 1 forwards;	/* Opera */
+}
+@keyframes pcanima {
+    0%   {left: -3.5em;opacity: 1;transform: scale(0.2);}
+    100% {left: -7.8em;opacity: 1;transform: scale(1);}
+}
+@-moz-keyframes pcanima /* Firefox */
+{
+    0%   {left: -3.5em;opacity: 1;transform: scale(0.2);}
+    100% {left: -7.8em;opacity: 1;transform: scale(1);}
+}
+
+@-webkit-keyframes pcanima /* Safari 和 Chrome */
+{
+    0%   {left: -3.5em;opacity: 1;transform: scale(0.2);}
+    100% {left: -7.8em;opacity: 1;transform: scale(1);}
+}
+
+@-o-keyframes pcanima /* Opera */
+{
+    0%   {left: -3.5em;opacity: 1;transform: scale(0.2);}
+    100% {left: -7.8em;opacity: 1;transform: scale(1);}
+}
+
+.cardcode{
+    width: 7.8em;
+    height: 9em;
+    left: 2.2em;
+    top: 8em;
+    background-image: url('../image/cardcode.png');
+}
+.cardcodeint{
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    
+    transform-origin: 60% -50%;
+    -webkit-transform-origin: 60% -50%;
+    -o-transform-origin: 60% -50%;
+    -moz-transform-origin: 60% -50%;
+    opacity: 0;
+}
+.cardanimove{
+    animation: ccanima 0.3s ease 1 forwards;
+    -moz-animation: ccanima 0.3s ease 1 forwards;	/* Firefox */
+    -webkit-animation: ccanima 0.3s ease 1 forwards;	/* Safari 和 Chrome */
+    -o-animation: ccanima 0.3s ease 1 forwards;	/* Opera */
+}
+@keyframes ccanima {
+    0%   {opacity: 1;transform: rotate(-90deg);}
+    100% {opacity: 1;transform: rotate(0deg);}
+}
+@-moz-keyframes ccanima /* Firefox */
+{
+    0%   {opacity: 1;transform: rotate(-90deg);}
+    100% {opacity: 1;transform: rotate(0deg);}
+}
+
+@-webkit-keyframes ccanima /* Safari 和 Chrome */
+{
+    0%   {opacity: 1;transform: rotate(-90deg);}
+    100% {opacity: 1;transform: rotate(0deg);}
+}
+
+@-o-keyframes ccanima /* Opera */
+{
+    0%   {opacity: 1;transform: rotate(-90deg);}
+    100% {opacity: 1;transform: rotate(0deg);}
+}

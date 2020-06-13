@@ -1,0 +1,27 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+    
+html,body,.contain{
+    height: 100%;
+}
+.contain{padding: 20px;}
+.printBtn{
+    width: 140px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: #549430;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.printBtn:active{
+    background-color: #5eaa31;
+}
+.pdfPrCom{
+    display: inline-block;
+    border: 1px dotted #549430;
+    padding: 10px;
+}
+h4{
+    margin: 10px;
+}

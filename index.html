@@ -5,66 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文件打印</title>
   <link rel="stylesheet" href="./css/print.css">
-  <style>
-    /* .ivpring{
-      display: none;
-    } */
-    html,body,.contain{
-      height: 100%;
-    }
-    .contain{padding-top: 20px;}
-    .printBtn{
-      width: 140px;
-      padding: 10px 0;
-      border-radius: 5px;
-      background-color: #549430;
-      color: #fff;
-      margin-top: 20px;
-      text-align: center;
-      cursor: pointer;
-    }
-    .printBtn:active{
-      background-color: #5eaa31;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/Uang.css">
 </head>
 <body>
   <div class="contain">
-    <input id="chomulinp" type="file" name="file" multiple onchange="printFile(this)" accept=".pdf">
-    <div class="printBtn" onclick="printNext()">打印下一个</div>
+    <div class="pdfPrCom">
+        <h4>多选PDF文件连续打印</h4>
+        <input id="chomulinp" type="file" name="file" multiple onchange="printFile(this)" accept=".pdf">
+        <div class="printBtn" onclick="printNext()">打印下一个</div>
+    </div>
     <!-- <iframe src="" frameborder="0" width="100%" height="100%" class="ivpring"></iframe> -->
   </div>
-  
+  <!-- 独角仙 -->
+  <div class="UangCom">
+    <div class="woodCon">
+      <div class="Uangimg UangMoving"></div>
+    </div>
+    <div class="paycode paycodeint"></div>
+    <div class="cardcode cardcodeint"></div>
+  </div>
   <script src="./js/print.min.js"></script>
-  <script>
-    // var iframe = document.getElementsByClassName('ivpring')[0];
-    var arrfile = [], leg=0,i=0, printBtn = document.getElementsByClassName("printBtn")[0];
-    function printFile(that){
-      arrfile = event.target.files,
-        leg = arrfile.length;
-        printNext();
-    }
-    // 打印下一个
-    function printNext(){
-      if(i>(leg-1)){
-        alert('已经打完啦，么么哒！');
-        location.reload(true);
-        return;
-      }
-      var filePath = window.URL.createObjectURL(arrfile[i]);
-      console.log(filePath);
-      printJS(filePath);
-      i++;
-      if(i<=(leg-1)) printBtn.innerHTML = '打印第'+ (i+1) +'个文件';
-    }
-
-    // console.log(window.URL.createObjectURL(arrfile[0]))
-    //     // iframe.src = arrfile[i];
-    //     // iframe.src = window.URL.createObjectURL(arrfile[i]);
-        
-    //     printJS(window.URL.createObjectURL(arrfile[i]));
-    //     // iframe.contentWindow.print();
-    //     // window.print()
-  </script>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/Uang.js"></script>
 </body>
 </html>
