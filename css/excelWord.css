@@ -1,0 +1,38 @@
+.excelWordCon {
+  cursor: pointer;
+}
+
+.excelWordCon:hover .excelWord {
+  transform: rotateY(-180deg);
+}
+
+.excelWord {
+  width: 267px;
+  height: 100%;
+  transition: all 0.7s ease;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  backface-visibility: hidden;
+}
+
+.rotate img {
+  width: 126px;
+}
+
+.rotateB {
+  display: flex;
+  justify-content: center;
+  transform: rotateY(180deg);
+}

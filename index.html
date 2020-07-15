@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文件打印</title>
+  <title>Uang</title>
   <link rel="stylesheet" href="./css/print.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/excelWord.css">
   <link rel="stylesheet" href="./css/Uang.css">
 </head>
 <body>
   <div class="contain">
-    <div class="pdfPrCom">
+    <div class="blockCom">
         <h4>多选PDF文件连续打印</h4>
         <input id="chomulinp" type="file" name="file" multiple onchange="printFile(this)" accept=".pdf">
         <div class="printBtn" onclick="printNext()">打印下一个</div>
+    </div>
+    <div class="blockCom excelWordCon">
+      <div class="excelWord">
+        <div class="rotate">Excel表格文件 转 指定格式Word文件</div>
+        <div class="rotate rotateB"><img src="./image/20200715104403.jpg" alt=""></div>
+      </div>
     </div>
     <!-- <iframe src="" frameborder="0" width="100%" height="100%" class="ivpring"></iframe> -->
   </div>
@@ -28,6 +35,8 @@
   <script src="./js/print.min.js"></script>
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/excelWord.js"></script>
+
   <script src="./js/Uang.js"></script>
 </body>
 </html>
